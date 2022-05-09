@@ -1,0 +1,24 @@
+.container {
+  width: 92%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  .add-button {
+    margin: 16px 5px;
+  }
+
+  table {
+    width: 100%;
+    border: 1px solid #d4d4d4;
+    box-shadow: none;
+  }
+
+  .action-link {
+    text-align: right;
+    button {
+      margin: 0 5px;
+    }
+  }
+}

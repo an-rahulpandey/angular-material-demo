@@ -1,0 +1,43 @@
+<mat-card>
+  <button (click)="goBack()" class="icon-button" mat-button><mat-icon>keyboard_arrow_left</mat-icon>Back</button>
+  <mat-card-title mat-dialog-title>{{ userId ? 'Update user' : 'Add user' }}</mat-card-title>
+  <form class="mat-dialog-content" [formGroup]="userFrom" (ngSubmit)="submit()">
+    <div class="form-input">
+      <mat-form-field>
+        <input matInput placeholder="Name" formControlName="name" />
+      </mat-form-field>
+    </div>
+
+    <div class="form-input">
+      <mat-form-field>
+        <input matInput placeholder="Work" formControlName="work" />
+      </mat-form-field>
+    </div>
+
+    <div class="form-input">
+      <mat-form-field>
+        <input matInput placeholder="Email address" formControlName="email" />
+      </mat-form-field>
+    </div>
+
+    <div class="form-input">
+      <mat-form-field>
+        <input matInput placeholder="Address" formControlName="address" />
+      </mat-form-field>
+    </div>
+
+    <div class="form-input">
+      <mat-form-field>
+        <input matInput placeholder="City" formControlName="city" />
+      </mat-form-field>
+    </div>
+
+    <div class="form-input">
+      <mat-checkbox formControlName="enable" color="primary">Enable</mat-checkbox>
+    </div>
+
+    <div class="d-flex justify-center">
+      <button mat-flat-button color="primary">{{ userId ? 'Update' : 'Add' }}</button>
+    </div>
+  </form>
+</mat-card>
